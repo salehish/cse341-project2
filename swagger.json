@@ -43,25 +43,25 @@
               "type": "object",
               "properties": {
                 "title": {
-                  "example": "any"
+                  "example": "Things Fall Apart"
                 },
                 "author": {
-                  "example": "any"
+                  "example": "Chinua Achebe"
                 },
                 "genre": {
-                  "example": "any"
+                  "example": "Fiction"
                 },
                 "publishedYear": {
-                  "example": "any"
+                  "example": "1952"
                 },
                 "pages": {
-                  "example": "any"
+                  "example": "208"
                 },
                 "price": {
-                  "example": "any"
+                  "example": "20.99"
                 },
                 "language": {
-                  "example": "any"
+                  "example": "English"
                 }
               }
             }
