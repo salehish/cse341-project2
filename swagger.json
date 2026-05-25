@@ -5,7 +5,7 @@
     "description": "Books and Authors API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project2-hnxa.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
@@ -57,10 +57,10 @@
                 "pages": {
                   "example": "any"
                 },
-                "publisher": {
+                "price": {
                   "example": "any"
                 },
-                "email": {
+                "language": {
                   "example": "any"
                 }
               }
