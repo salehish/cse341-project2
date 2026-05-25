@@ -1,0 +1,62 @@
+### Get all authors
+GET http://localhost:3000/authors
+
+### Create new author
+POST http://localhost:3000/authors
+Content-Type: application/json
+
+{
+  "firstName": "Aminah",
+  "lastName": "Nakalyowa",
+  "email": "aminah@gmail.com",
+  "nationality": "Ugandan",
+  "age": 30,
+  "genre": "Novel",
+  "booksPublished": 12
+}
+
+### Get single author
+GET http://localhost:3000/authors/6852ab7c91f2d4c3210abcd1
+
+### Update author
+PUT http://localhost:3000/authors/6852ab7c91f2d4c3210abcd1
+Content-Type: application/json
+
+{
+  "genre": "African Literature"
+}
+
+### Delete author
+DELETE http://localhost:3000/authors/6852ab7c91f2d4c3210abcd1
+
+
+### Get all books
+GET http://localhost:3000/books
+
+### Create new book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Things Fall Apart",
+  "author": "Chinua Achebe",
+  "genre": "Novel",
+  "pages": 209,
+  "publishedYear": 1958,
+  "price": 20,
+  "language": "English"
+}
+
+### Get single book
+GET http://localhost:3000/books/6852ab7c91f2d4c3210abcd2
+
+### Update book
+PUT http://localhost:3000/books/6852ab7c91f2d4c3210abcd2
+Content-Type: application/json
+
+{
+  "price": 25
+}
+
+### Delete book
+DELETE http://localhost:3000/books/6852ab7c91f2d4c3210abcd2
