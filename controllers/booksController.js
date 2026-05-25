@@ -40,6 +40,7 @@ const getSingleBook = async (req, res) => {
 };
 
 // Create book
+// Create book
 const createBook = async (req, res) => {
   try {
 
@@ -50,10 +51,10 @@ const createBook = async (req, res) => {
       publishedYear,
       pages,
       price,
-      language  
+      language
     } = req.body;
 
-    // My validation
+    // Validation
     if (
       !title ||
       !author ||
@@ -61,8 +62,7 @@ const createBook = async (req, res) => {
       !publishedYear ||
       !pages ||
       !price ||
-      !language ||
-      !email
+      !language
     ) {
       return res.status(400).json({
         message: 'All fields are required'
