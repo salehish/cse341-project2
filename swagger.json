@@ -170,25 +170,25 @@
               "type": "object",
               "properties": {
                 "firstName": {
-                  "example": "any"
+                  "example": "Aminah"
                 },
                 "lastName": {
-                  "example": "any"
+                  "example": "Nakalyowa"
                 },
                 "email": {
-                  "example": "any"
+                  "example": "aminah@gmail.com"
                 },
                 "nationality": {
-                  "example": "any"
+                  "example": "Ugandan"
                 },
                 "age": {
-                  "example": "any"
+                  "example": "29"
                 },
                 "genre": {
-                  "example": "any"
+                  "example": "Novel"
                 },
                 "booksPublished": {
-                  "example": "any"
+                  "example": "14"
                 }
               }
             }
