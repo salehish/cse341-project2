@@ -16,10 +16,6 @@ app.use('/', require('./routes'));
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.get('/', (req, res) => {
-  res.send('Project 2 API running');
-});
-
 connectDB();
 
 app.listen(port, () => {
