@@ -7,7 +7,7 @@ router.use('/courses', require('./courses'));
 router.use('/auth', require('./auth'));
 
 router.get('/', (req, res) => {
-  res.send('Project 2 API Running');
+  res.status(200).json({ message: 'Project 2 API Running' });
 });
 
 module.exports = router;
