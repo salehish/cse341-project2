@@ -4,7 +4,7 @@ GET http://localhost:3000/students
 ### Create new student
 POST http://localhost:3000/students
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 
 {
 "firstName": "Ivan",
@@ -23,15 +23,14 @@ GET http://localhost:3000/students/PUT_REAL_ID_HERE
 ### Update student (Protected Route)
 PUT http://localhost:3000/students/PUT_REAL_ID_HERE
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 {
 "major": "Software Engineering"
 }
 
 ### Delete student (Protected Route)
 DELETE http://localhost:3000/students/PUT_REAL_ID_HERE
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 
 
 ### Get all courses
@@ -55,7 +54,7 @@ GET http://localhost:3000/courses/PUT_REAL_ID_HERE
 ### Update course (Protected Route)
 PUT http://localhost:3000/courses/PUT_REAL_ID_HERE
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 
 {
 "credits": 5
@@ -63,13 +62,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlM
 
 ### Delete course (Protected Route)
 DELETE http://localhost:3000/courses/PUT_REAL_ID_HERE
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
-
-### Register user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 POST http://localhost:3000/auth/register
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 {
 "username": "saleh",
 "email": "saleh@gmail.com",
@@ -79,7 +75,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlM
 ### Login user
 POST http://localhost:3000/auth/login
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 
 {
 "email": "saleh@gmail.com",
@@ -92,7 +88,7 @@ GET http://localhost:3000/auth/logout
 ### Testing protected route without token
 PUT http://localhost:3000/students/PUT_REAL_ID_HERE
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
   
 {
 "major": "Cyber Security"
