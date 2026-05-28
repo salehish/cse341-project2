@@ -2,14 +2,16 @@ const router = require('express').Router();
 
 const coursesController = require('../controllers/coursesController');
 
+const authenticate = require('../middleware/authenticate');
+
 router.get('/', coursesController.getAllCourses);
 
 router.get('/:id', coursesController.getSingleCourse);
 
-router.post('/', coursesController.createCourse);
+router.post('/', authenticate, coursesController.createCourse);
 
-router.put('/:id', coursesController.updateCourse);
+router.put('/:id', authenticate, coursesController.updateCourse);
 
-router.delete('/:id', coursesController.deleteCourse);
+router.delete('/:id', authenticate, coursesController.deleteCourse);
 
 module.exports = router;

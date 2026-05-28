@@ -4,29 +4,34 @@ GET http://localhost:3000/students
 ### Create new student
 POST http://localhost:3000/students
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
 
 {
-  "firstName": "John",
-  "lastName": "Hamidu",
-  "email": "johnh@gmail.com",
-  "major": "Computer Science",
-  "gpa": 3.8,
-  "year": 2
+"firstName": "Ivan",
+"lastName": "hellman",
+"email": "ivan@gmail.com",
+"major": "Data structure",
+"address": "252 Main St",
+"phone": "+256701952380",
+"gpa": 3,
+"year": 2
 }
 
 ### Get single student
 GET http://localhost:3000/students/PUT_REAL_ID_HERE
 
-### Update student
+### Update student (Protected Route)
 PUT http://localhost:3000/students/PUT_REAL_ID_HERE
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
 
 {
-  "major": "Software Engineering"
+"major": "Software Engineering"
 }
 
-### Delete student
+### Delete student (Protected Route)
 DELETE http://localhost:3000/students/PUT_REAL_ID_HERE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
 
 
 ### Get all courses
@@ -35,24 +40,60 @@ GET http://localhost:3000/courses
 ### Create new course
 POST http://localhost:3000/courses
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
 
 {
-  "courseName": "Data Structures",
-  "courseCode": "CSE310",
-  "instructor": "Brother Hellman",
-  "credits": 4
+"courseName": "Data Structures",
+"courseCode": "CSE310",
+"instructor": "Brother Hellman",
+"credits": 4
 }
 
 ### Get single course
 GET http://localhost:3000/courses/PUT_REAL_ID_HERE
 
-### Update course
+### Update course (Protected Route)
 PUT http://localhost:3000/courses/PUT_REAL_ID_HERE
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
 
 {
-  "credits": 4
+"credits": 5
 }
 
-### Delete course
+### Delete course (Protected Route)
 DELETE http://localhost:3000/courses/PUT_REAL_ID_HERE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+
+### Register user
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+
+{
+"username": "saleh",
+"email": "saleh@gmail.com",
+"password": "123456"
+}
+
+### Login user
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk2OTg3OSwiZXhwIjoxNzgwMDU2Mjc5fQ.CDI2SwOxGMI3ezpgTDDEFpGjtlkOP4ig65RBQTBOv7M
+
+{
+"email": "saleh@gmail.com",
+"password": "123456"
+}
+
+### Logout user
+GET http://localhost:3000/auth/logout
+
+### Testing protected route without token
+PUT http://localhost:3000/students/PUT_REAL_ID_HERE
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp
+  
+{
+"major": "Cyber Security"
+}

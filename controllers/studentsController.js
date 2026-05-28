@@ -54,6 +54,8 @@ const createStudent = async (req, res) => {
       firstName,
       lastName,
       email,
+      address,
+      phone,
       major,
       gpa,
       year
@@ -64,6 +66,8 @@ const createStudent = async (req, res) => {
       !firstName ||
       !lastName ||
       !email ||
+      !address ||
+      !phone ||   
       !major ||
       !gpa ||
       !year
@@ -83,6 +87,8 @@ const createStudent = async (req, res) => {
       firstName,
       lastName,
       email,
+      address,
+      phone,
       major,
       gpa,
       year
