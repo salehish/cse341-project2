@@ -4,7 +4,7 @@ GET http://localhost:3000/students
 ### Create new student
 POST http://localhost:3000/students
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk4MDgyNywiZXhwIjoxNzgwMDY3MjI3fQ.L6614DGCRw8KxE_2I_wksJESR_UKmVzsN9LWicDy7rI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 
 {
 "firstName": "Ivan",
@@ -23,7 +23,7 @@ GET http://localhost:3000/students/PUT_REAL_ID_HERE
 ### Update student (Protected Route)
 PUT http://localhost:3000/students/PUT_REAL_ID_HERE
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk4MDgyNywiZXhwIjoxNzgwMDY3MjI3fQ.L6614DGCRw8KxE_2I_wksJESR_UKmVzsN9LWicDy7rI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMTgyZWRlMzBjNzM5MmQyNTgwZmU1YSIsImlhdCI6MTc3OTk3ODE0MSwiZXhwIjoxNzgwMDY0NTQxfQ.zZk8MuNX22DKyBgvIUd3ZtnJATI74dl7M4F49d1cmUA
 {
 "major": "Software Engineering"
 }
