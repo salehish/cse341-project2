@@ -23,6 +23,10 @@ router.post('/logout', (req, res) => {
   });
 });
 
+router.get('/test', (req, res) => {
+  res.send('Auth router works');
+});
+
 router.get(
   '/github',
   passport.authenticate('github', { scope: ['user:email'] })
