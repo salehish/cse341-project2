@@ -2,9 +2,7 @@ const router = require('express').Router();
 
 const authController = require('../controllers/authController');
 
-const passport = require('passport');
-
- const passport = require('../config/passport');
+const passport = require('../config/passport');
 
 router.post('/register', authController.registerUser);
 
