@@ -2,16 +2,15 @@ const router = require('express').Router();
 
 const coursesController = require('../controllers/coursesController');
 
-const authenticate = require('../middleware/authenticate');
+const ensureAuth = require('../middleware/ensureAuth');
 
+// Public routes
 router.get('/', coursesController.getAllCourses);
-
 router.get('/:id', coursesController.getSingleCourse);
 
-router.post('/', authenticate, coursesController.createCourse);
-
-router.put('/:id', authenticate, coursesController.updateCourse);
-
-router.delete('/:id', authenticate, coursesController.deleteCourse);
+// Protected routes (require GitHub login)
+router.post('/', ensureAuth, coursesController.createCourse);
+router.put('/:id', ensureAuth, coursesController.updateCourse);
+router.delete('/:id', ensureAuth, coursesController.deleteCourse);
 
 module.exports = router;
