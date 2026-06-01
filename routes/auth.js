@@ -23,6 +23,28 @@ router.post('/logout', (req, res) => {
   });
 });
 
+router.get('/logout', (req, res) => {
+  req.logout((err) => {
+    if (err) {
+      return res.status(500).json({
+        message: 'Error occurred while logging out'
+      });
+    }
+
+    req.session.destroy((err) => {
+      if (err) {
+        return res.status(500).json({
+          message: 'Error occurred while destroying session'
+        });
+      }
+
+      res.json({
+        message: 'Logged out successfully'
+      });
+    });
+  });
+});
+
 router.get('/test', (req, res) => {
   res.send('Auth router works');
 });
